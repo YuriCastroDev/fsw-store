@@ -1,14 +1,15 @@
 import Image, { ImageProps } from "next/image";
 
-const PromoBanner = (props: ImageProps) => {
+const PromoBanner = ({ alt, ...props }: ImageProps) => {
   return (
     <Image
-      className="h-auto w-full p-5"
-      sizes="100vw"
       height={0}
       width={0}
+      className="h-auto w-full px-5"
+      sizes="100vw"
+      alt={alt}
       {...props}
-    ></Image>
+    />
   );
 };
 
